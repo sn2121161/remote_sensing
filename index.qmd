@@ -1,0 +1,5 @@
+# Introduction
+
+-   This book is a learning diary for CASA0023 Remotely Sensing Cities and Environments
+
+![What is Remote Sensing](image/remote.jpg)
