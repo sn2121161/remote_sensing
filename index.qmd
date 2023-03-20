@@ -1,5 +1,13 @@
-# Introduction
+# Introduction {.unnumbered}
 
--   This book is a learning diary for CASA0023 Remotely Sensing Cities and Environments
+Welcome to my learning diary
 
-![What is Remote Sensing](image/remote.jpg)
+## Background information
+
+My name is Wenxi Mo, my bachelor's degree is Electrical and Electronic Engineering in Cardiff University, master's degree is Social and Geographic Data Science in UCL. In my spare time I enjoy different sports: basketball, football, running and so on. I hope to learn skills in this module that will help me in the future.
+
+## About this learning diary
+
+This book is a learning diary for CASA0023 Remotely Sensing Cities and Environments, master course of UCL, the content of this course includes the principle of remote sensing, applications, and analysis using several tools, R and Google Earth Engine. This book is written by Quarto Book, all the code can be seen on my github page.
+
+![What is Remote Sensing](docs/image/remote.jpg)

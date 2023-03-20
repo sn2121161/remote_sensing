@@ -1,0 +1,159 @@
+# Week7: Classification II
+
+## Summary
+
+This week I learned several analysis methods, object based image analysis and sub pixel analysis
+
+### Objected based image analysis
+
+Superpixels are regions of pixels that have similar values and can be used to simplify image processing tasks such as segmentation. It is common to use SLIC algorithm is a method to generate superpixels by clustering pixels in a five-dimensional color and image plane space. It is fast, easy to use and produces compact and uniform superpixels.
+
+The top-left panel shows the initial segmentation. The top-right and bottom-left show the segmentation after 1 and 10 iterations. SLIC has converged in the bottom-right panel
+
+![A simple case of SLIC algorithm. Source: [Researchgate](The%20top-left%20panel%20shows%20the%20initial%20segmentation.%20The%20top-right%20and%20bottom-left%20show%20the%20segmentation%20after%201%20and%2010%20iterations.%20SLIC%20has%20converged%20in%20the%20bottom-right%20panel)](docs/image/case.png)
+
+-   The improvement of SLIC algorithm - SLICO
+
+SLIC need to set the compactness parameter or try different values of it, but SLICO adaptively chooses the compactness parameter for each superpixel differently. This generates regular shaped superpixels in both textured and non textured regions alike.
+
+![Comparison between SLIC (up) and SLICO (down). Source: [EPFL](https://www.epfl.ch/labs/ivrl/research/slic-superpixels/)](docs/image/SLICO.png)
+
+### Subpixel analysis
+
+Subpixel analysis can estimate the location or movement of an object in an image with a precision higher than the pixel level1. subpixel analysis can be used to measure the dimensions of a small object by removing the background spectra and comparing the residual spectrum with a signature spectrum
+
+![Subpixel mapping. Source: [Researchgate](https://www.researchgate.net/figure/Sub-pixel-mapping-allocates-the-fractions-from-a-soft-classification-to-individual_fig1_260219792)](docs/image/subpixel.png)
+
+### Accuracy assessment
+
+Here we use the confusion matrix to assess the accuracy of algorithm performance, but not every indicator can be satisfied because of the conflict of indicators themselves.
+
+![Confusion matrix. Source: [Barsi et al. 2018 Accuracy Dimensions in Remote Sensing](https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-3/61/2018/isprs-archives-XLII-3-61-2018.pdf)](docs/image/matrix.png)
+
+-   producer's accuracy defined as the fraction of correctly classified pixels (TP) compared to ground truth data (TP+FN)
+
+$TP / (TP + FN)$
+
+-   user's accuracy defined as the fraction of correctly classified pixels (TP) relative to all others classified as a particular land cover(TP+FP)
+
+$TP / (TP + FP)$
+
+-   overall accuracy that represents the combined fraction of correctly classified pixels (TP +TN) across all land cover types (TP+FP+FN+TN)
+
+$(TP +TN) / (TP + FP + FN + TN)$
+
+#### F1 score
+
+The F1-Score (or F Measure) combines both recall (Producer accuracy) and Precision (User accuracy), the importance of F1 score is that it can balance the trade-off between precision and recall, and give more weight to both false positives and false negatives than accuracy alone.
+
+![F1 formula](docs/image/F1score.png)
+
+![Source: [mlu-explain](https://mlu-explain.github.io/precision-recall/)](docs/image/decision.png)
+
+#### ROC curve
+
+ROC curve is a useful tool to measure the generalization ability of a machine learning algorithm, but in reality, we can get the right curve (discrete) based on limited cases and extrapolate the complete curve
+
+![ROC and AUC. Source: [Machine learning]()](docs/image/roc.png)
+
+#### Cross validation
+
+In order to enhance the randomness of training data, it is common to use cross validation, here is the schematic diagram.
+
+![Cross validation](docs/image/cross.png)
+
+#### Spatial cross validation
+
+Spatial cross validation splits the data into groups based on their spatial coordinates, and then evaluates a model on each group separately. It is used to avoid overfitting or underfitting when the data has spatial structure or dependence.
+
+![Spatial visualization of traing data and testing data. Source: [Lovelace et al. 2020](https://r.geocompx.org/spatial-cv.html)](docs/image/sp.png)
+
+#### GEE practice
+
+I used several classification methods mentioned before and used Lhasa Tibet as an analysis example.
+
+Here is the workflow:
+
+1.  select Lhasa vector data and EO data
+
+2.  sub-pixel analysis use unmix() to add all togther and calculate confusion matrix
+
+3.  object based image analysis, use gradient()
+
+4.  superpixel analysis, use k-means then set seeds, run SNIC and calculate NDVI, do a classification task.
+
+Here is the result of each method:
+
+![Sub-pixel](docs/image/lhasa7-2.png)
+
+![Object](docs/image/lhasa7-3.png)
+
+![Super-pixel](docs/image/lhasa7-7.png)
+
+In general, sub-pixel shows more detailed information than superpixel, the differentiation between small pixels is ignored, resulting in larger pixels, and this approach is better at the higher precision level.
+
+## Applicaion
+
+-   Case 1: Burlington city land type analysis
+
+Steps:
+
+1.  get EO data of Burlington city (on the border between the states of Iowa and Illinois)
+
+2.  use SNIC(Simple Non-Iterative Clustering) for the segmentation
+
+![Source: [Firigato, 2022](https://joaootavionf007.medium.com/object-based-image-analysis-on-google-earth-engine-1b80e9cb7312)](docs/image/SNIC.webp)
+
+3.  sample collection, select each class of land use and land cover. typically, 5 classes: Urban, Water, Agriculture, Forestry and Grass.
+
+![Points choosed](docs/image/selection.webp)
+
+4.  perform the segment classification. the algorithm is Random Forest, result:
+
+![Result](docs/image/res.webp)
+
+-   Case 2: Assess building seismic vulnerability
+
+Wu et al. (2013) used object-based image analysis (OBIA) that uses high-resolution satellite images to assess building seismic vulnerability. They apply OBIA to extract building features such as height, area, shape, and roof type from satellite images of Guanggu Wuhan, China. They then use these features to classify buildings into different vulnerability classes based on a seismic vulnerability index. They compare their results with field surveys and find that OBIA can provide a reliable and efficient way to map building seismic vulnerability at a large scale.
+
+![Architecture of assessment. Source: [Wu et al., 2013](https://link.springer.com/article/10.1007/s11069-013-0905-6/figures/2)](docs/image/arch.webp)
+
+They used SNIC for segmentation:
+
+![SNIC segmentation](docs/image/snic2.webp)
+
+After analysis, they give a building seismic vulnerability assessment of investigated area, and confirm the grade.
+
+![vulnerability: DG5 \> DG4 \> DG3](docs/image/snic3.webp)
+
+## Reflection
+
+In this week, I feel interested the k-means algorithm when conducting a superpixel analysis. At that time, I found the result of K-means is not good, I want to know the principle of K-means and its substitutes.
+
+### Principle of K-means
+
+K-means partitions a set of data points into k groups, where k is a predefined number. The principle of k-means is to minimize the sum of squared distances between each data point and its closest cluster center. The algorithm works as follows:
+
+Step 1: Randomly initialize k cluster centers
+
+Step 2: Assign each data point to the nearest cluster center
+
+Step 3: Recalculate the cluster centers as the mean of the data points assigned to them
+
+Step 4: Repeat steps 2 and 3 until convergence or a maximum number of iterations is reached
+
+![K-means example. Source: [Researchgate](https://www.researchgate.net/figure/Employer-K-means-cluster-plot_fig1_344216519)](docs/image/k-means.png)
+
+### Improvements
+
+k-means is suitable for clusters with clear delineation boundaries between each cluster, and the distribution is close to circular, and the amount of data in each cluster is more uniform, so it does not play very well in practical applications.
+
+There is an improved clustering algorithm called Gaussian mixture model (GMM), GMM combines several single Gaussian distributions in average and standard deviation, then they have several differences:
+
+-   K-means assumes that each cluster has a spherical shape and equal size, while GMM assumes that each cluster has an elliptical shape and different size.
+-   K-means assigns each data point to one and only one cluster center based on the minimum distance, while GMM assigns each data point to multiple cluster centers based on the probability distribution.
+-   K-means uses an iterative local optimization technique to minimize the sum of squared distances between each data point and its closest cluster center, while GMM uses an expectation-maximization (EM) algorithm to maximize the likelihood of the data given the model parameters.
+
+In reality, we use GMM to divide clusters that exhibit elliptical data distributions precisely because it is better than K-means
+
+![Comparison between GMM and K-means. Source: [Amueller](https://amueller.github.io/aml/03-unsupervised-learning/02-clustering-mixture-models.html)](docs/image/gmm.png)

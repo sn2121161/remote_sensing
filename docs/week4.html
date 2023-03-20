@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CASA0023 Learning Diary - 4&nbsp; Week 4: Policy</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./week5.html" rel="next">
+<link href="./week3.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4: Policy</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CASA0023 Learning Diary</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Getting started with remote sensing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2: Portfolio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3: Corrections</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week4.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4: Policy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5: Google Earth Engine</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6: Classification I</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week7: Classification II</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week8: Temperature</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">4.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#london-city-plan-zero-carbon-policy" id="toc-london-city-plan-zero-carbon-policy" class="nav-link" data-scroll-target="#london-city-plan-zero-carbon-policy"><span class="toc-section-number">4.1.1</span>  London City Plan – zero-carbon policy</a></li>
+  </ul></li>
+  <li><a href="#application-on-carbon-emission" id="toc-application-on-carbon-emission" class="nav-link" data-scroll-target="#application-on-carbon-emission"><span class="toc-section-number">4.2</span>  Application on carbon emission</a>
+  <ul class="collapse">
+  <li><a href="#step-1-heat-spots-identification" id="toc-step-1-heat-spots-identification" class="nav-link" data-scroll-target="#step-1-heat-spots-identification"><span class="toc-section-number">4.2.1</span>  Step 1: Heat spots identification</a></li>
+  <li><a href="#step-2-identification-of-high-emitted-vehicles" id="toc-step-2-identification-of-high-emitted-vehicles" class="nav-link" data-scroll-target="#step-2-identification-of-high-emitted-vehicles"><span class="toc-section-number">4.2.2</span>  Step 2: Identification of high-emitted vehicles</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">4.3</span>  Reflection</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4: Policy</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<ul>
+<li>city selected: London, England, UK</li>
+<li>city development policy: zero carbon emission</li>
+</ul>
+<section id="summary" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">4.1</span> Summary</h2>
+<section id="london-city-plan-zero-carbon-policy" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="london-city-plan-zero-carbon-policy"><span class="header-section-number">4.1.1</span> London City Plan – zero-carbon policy</h3>
+<p>With the increasing scale of greenhouse gas emissions in recent years and the increasing severity of the global warming situation, London 2021 city plan sets a significant goal to minimise the greenhouse gas emission, the detailed aims are below:</p>
+<ol type="1">
+<li>city development should be net-zero carbon: reducing greenhouse gas emission in operation; minimise both annual and peak energy demand according to several energy hierarchies:</li>
+</ol>
+<ul>
+<li>be lean: less energy used and energy demand management</li>
+<li>be clean: fully use local energy (secondary energy explicit) and use energy more efficiently and cleanly.</li>
+<li>be green: add the opportunity for using renewable energy, provide producing, storing energy on-site</li>
+<li>be seen: monitor, verify and report on energy performance.</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/energy.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Energy hierarchy framework. Source: <a href="https://www.london.gov.uk/programmes-strategies/planning/london-plan/new-london-plan/london-plan-2021">London city plan 2021</a></figcaption><p></p>
+</figure>
+</div>
+<ol start="2" type="1">
+<li><p>City development proposals should include energy strategic and demonstrate how energy hierarchy framework includes the zero-carbon target.</p></li>
+<li><p>A minimum 35% reduction in energy consumption on site for major development program, 10% for residential developments and 15% for non-residential developments through energy efficiency measures should be achieved. Where this is difficult to achieve, there should be compensation for cash compensation for shortfalls or provide an alternative that will meet the target.</p></li>
+<li><p>Each borough government should establish and manage a carbon offset fund, ensure the capital should be invested to the carbon reduction direction, and all the operations should be monitored and reported to specific authorisations.</p></li>
+<li><p>Carbon reduction proposal should be quantified as separated to different plants, equipment and other responsible parties.</p></li>
+<li><p>Whole life-cycle carbon emissions should be calculated to satisfy the proposal of city development through a nationally recognised Whole Life-Cycle Carbon Assessment.</p></li>
+</ol>
+</section>
+</section>
+<section id="application-on-carbon-emission" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="application-on-carbon-emission"><span class="header-section-number">4.2</span> Application on carbon emission</h2>
+<section id="step-1-heat-spots-identification" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="step-1-heat-spots-identification"><span class="header-section-number">4.2.1</span> Step 1: Heat spots identification</h3>
+<p>Landsat8 satellite can provide a high-resolution thermal data and use as a basis for mapping the spatial distribution of Great London Area (GLA) surface temperatures and identifying those urban hotspots.</p>
+<ul>
+<li>Dataset description:</li>
+</ul>
+<p>This dataset is a count of surface temperatures from the summer months (June, July and August only) between 2016 and 2020, obtained from landsat8 thermal infrared imagery. In addition to the five-year average temperature for the area, the dataset also includes maximum and minimum temperatures and standard deviations to provide a visual representation of the magnitude and range of temperature changes over the five-year period in GLA.</p>
+<ul>
+<li>Distribution map and analysis</li>
+</ul>
+<p>Higher temperatures indicate places with high population density or dense plant and equipment, where greenhouse gas emissions are generally higher than in places with less.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/hotspot.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">heat spot of London summer temperature. Data source: Major Summer Heat Spot London Datastore</figcaption><p></p>
+</figure>
+</div>
+<p>As can be seen from the map, the population is predominantly distributed between the north and south banks of the Thames, with the population on the north bank being greater than that on the south bank. The green belt around London can be seen more clearly on the map. The population of the north bank is more dense in the east than in the west. The density of population is high from the City of London all the way north, and is also high in north-east London, decreasing further east. Conversely, the centre of the South Bank is more densely populated, while the east and west are less dense. If Greater London continues to expand, the north-east and south-east would be a better choice.</p>
+<p>Take the City of London for example, some areas saw the highest temperatures compared with the whole city, such as Euston Station east of Regent’s Park, and most of the high heat areas were in high-traffic areas such as train stations, tube stations, shopping malls and airports.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/city.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">heat spot in City of London</figcaption><p></p>
+</figure>
+</div>
+<p>In addition to population density affecting surface temperatures, industry, airport also have an impact on surface temperatures, with the highest surface temperatures occurring in the five year period shown below at the Dagenham engine plant, ocado customer fullfilment centre, ExCel International Convention and Exhibition Centre along the Thames in east London, and Heathrow Airport to the west.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/east.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Highest temperature areas (east)</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/heathrow.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Highest temperature areas (west)</figcaption><p></p>
+</figure>
+</div>
+<p>Knowing the temperature changes will help to understand the population distribution in GLA, which in turn will allow transport to be organised to develop faster and more accessible transport in dense areas, to develop infrastructure and to reduce the pressure on existing transport (for example, the central line passes through areas of great population density, and the central line is the oldest tube in London and still the busiest in London). The central line, for example, is the oldest and still the busiest tube in London, so it has to take on a lot of traffic pressure). In addition, more polluting facilities such as factories can be relocated to less populated areas. Knowing the distribution of temperatures can also control the creation of high temperature situations, such as the rare high temperatures in the London area in the summer of 2022.</p>
+</section>
+<section id="step-2-identification-of-high-emitted-vehicles" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="step-2-identification-of-high-emitted-vehicles"><span class="header-section-number">4.2.2</span> Step 2: Identification of high-emitted vehicles</h3>
+<p>In response to a call for collaboration between the Mayor of London and the TRUE initiative, carbon emissions from passing vehicles were tested using remote sensing technology at nine sites across Greater London between 2017 and 2018, with carbon emissions data recorded for over 100,000 vehicles, The experiment focused on petrol and diesel vehicles in the London area, with vehicle types including passenger cars, buses, light passenger vehicles, trucks and motorbikes, and measured emissions of carbon oxides and nitrogen oxides.</p>
+<ul>
+<li>Dataset example</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/docs/image/dataset_ex.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">data descriptive statistics. Soruce: <a href="https://www.trueinitiative.org/">Dallmann et al., 2018</a></figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Remote sensing equipment introduction</li>
+</ul>
+<p>The remote sensing equipment used for the experiments was the Opus AccuScan RSD5000, which was the first to test exhaust gases in three main ways:</p>
+<ol type="1">
+<li><p>The device emits infrared and ultraviolet light velocities that pass through vehicle emissions, measuring the attenuation of these beams, instant vehicle emissions, the device measures nitrogen oxides and carbon oxides, opacity is measured as a proxy for respirable particulate matter, the device emits a frequency of 200 Hz and can measure 100 times in 0.5 seconds.</p></li>
+<li><p>Measurement of the instantaneous acceleration of the vehicle as a measure of the engine load, which is related to the instantaneous emission rate.</p></li>
+<li><p>One camera is responsible for photographing the vehicle licence plate for database comparison to determine its model, displacement standard.</p></li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/docs/image/equipment.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">remote sensing equipment</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>The general conditions of testing vehicles</li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/categories.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Characteristic of testing vehicles. Soruce: Dallmann et al., 2018</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Result:</li>
+</ul>
+<ol type="1">
+<li>Diesel passenger cars are six to seven times more likely to emit nitrogen oxides than petrol passenger cars.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/nox.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">6 standard Euro NOx emission. Source: Dallmann et al., 2018</figcaption><p></p>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>Euro5 and Euro6 diesel engines emit significantly more nitrogen oxides than Euro3 and Euro4, while petrol engines emit the similar amount</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/euro.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">average distance NOx emission for different vehicle family. Source: Dallmann et al., 2018</figcaption><p></p>
+</figure>
+</div>
+<p>Therefore, petrol vehicles outperform diesel vehicles and to achieve carbon emission reductions, the number of diesel vehicles needs to be limited and Euro3 or Euro4 diesel engines should be promoted instead of Euro5 and Euro6.</p>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">4.3</span> Reflection</h2>
+<p>In this week, I focused on the specific city development goal, minimising carbon emission, building zero-carbon city, to find cases for practice, and use the heat spot distribution map and identification of high-emitted vehicle to demonstrate how these goals are met within the energy hierarchy framework.</p>
+<p>With the policy and the measurement mentioned on the London city plan 2021, the borough governments will take actions to control high-emitted areas and objects, for example, set the highest emission restriction for plants and equipment, and decrease the peak energy demand. restrict vehicles (time restriction, location restriction) to the city center area, encourage the replacement of Euro engine by providing benefits and making compensation.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./week3.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3: Corrections</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./week5.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5: Google Earth Engine</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

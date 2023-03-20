@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CASA0023 Learning Diary - 8&nbsp; Week8: Temperature</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./week7.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week8: Temperature</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CASA0023 Learning Diary</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Introduction</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week 1: Getting started with remote sensing</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week 2: Portfolio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week 3: Corrections</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week 4: Policy</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week 5: Google Earth Engine</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week 6: Classification I</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week7: Classification II</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./week8.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week8: Temperature</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary" id="toc-summary" class="nav-link active" data-scroll-target="#summary"><span class="toc-section-number">8.1</span>  Summary</a>
+  <ul class="collapse">
+  <li><a href="#urban-heat-island-problem" id="toc-urban-heat-island-problem" class="nav-link" data-scroll-target="#urban-heat-island-problem"><span class="toc-section-number">8.1.1</span>  Urban Heat Island problem</a></li>
+  <li><a href="#application-in-gee" id="toc-application-in-gee" class="nav-link" data-scroll-target="#application-in-gee"><span class="toc-section-number">8.1.2</span>  Application in GEE</a></li>
+  </ul></li>
+  <li><a href="#applicaion" id="toc-applicaion" class="nav-link" data-scroll-target="#applicaion"><span class="toc-section-number">8.2</span>  Applicaion</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="toc-section-number">8.3</span>  Reflection</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week8: Temperature</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="summary" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="summary"><span class="header-section-number">8.1</span> Summary</h2>
+<section id="urban-heat-island-problem" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="urban-heat-island-problem"><span class="header-section-number">8.1.1</span> Urban Heat Island problem</h3>
+<section id="definition" class="level4" data-number="8.1.1.1">
+<h4 data-number="8.1.1.1" class="anchored" data-anchor-id="definition"><span class="header-section-number">8.1.1.1</span> Definition</h4>
+<p>Urban heat island is a city that is much warmer than its surrounding rural areas because of human activities. The temperature difference can be up to 7°F during the daytime</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/uhi.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Description of Urban Heat Island</figcaption><p></p>
+</figure>
+</div>
+<p>Example of London: in this graph, it can be seen that the closer to the city center the hotter the area is, as there are more sources of heat and the temperature decreases from the center to the periphery, a typical heat island effect.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/london.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">UHI in London. Source: <a href="https://climatelondon.org/climate-change/heatwaves/">London Climate Change</a></figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="hazards-of-uhi" class="level4" data-number="8.1.1.2">
+<h4 data-number="8.1.1.2" class="anchored" data-anchor-id="hazards-of-uhi"><span class="header-section-number">8.1.1.2</span> Hazards of UHI</h4>
+<p>Affected population: from the investigation within 13,115 cities from 1983 to 2016, urban exposure increased nearly 200%, affecting 1.7 billion people.</p>
+<p>Economic loss: In Melbourne, for example, if the heat island effect is not controlled, the city’s economic losses will increase every year, and this increase is mainly in terms of the impact on human health and energy use, with the heat island effect threatening health and therefore necessitating greater investment in healthcare resources, and energy consumption mainly in terms of cooling</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/loss.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Economic loss in Melnourne. Source: <a href="https://www.melbourne.vic.gov.au/sitecollectiondocuments/eco-assessment-of-urban-heat-island-effect.pdf">AECOM, 2012</a></figcaption><p></p>
+</figure>
+</div>
+<p>Environment impact: urban heat island (UHI) raises electricity demand during summer. As a result, power plants have to supply the needed extra energy, and since they rely on fossil fuel for energy production, there is an increase in greenhouse gas emissions and air pollutants. The main greenhouse gases and pollutants include carbon monoxide (CO), carbon dioxide (CO2), sulfur dioxide (SO2), nitrogen oxides (NOx), particulate matter and Mercury (Hg). Increased greenhouse gases cause global warming and climate change.</p>
+</section>
+<section id="policies" class="level4" data-number="8.1.1.3">
+<h4 data-number="8.1.1.3" class="anchored" data-anchor-id="policies"><span class="header-section-number">8.1.1.3</span> Policies</h4>
+<ul>
+<li>Global</li>
+</ul>
+<p>New Urban Agenda = standards and principles for planning, construction, development, management and urban improvement</p>
+<ol type="1">
+<li>Point 54</li>
+</ol>
+<p>We commit ourselves to the generation and use of renewable and affordable energy and sustainable and efficient transport infrastructure and services, where possible, achieving the benefits of connectivity and reducing the financial, environmental and public health costs of inefficient mobility, congestion, air pollution, urban heat island effects and noise.</p>
+<ol start="2" type="1">
+<li>Point 79</li>
+</ol>
+<p>We commit ourselves to promoting international, national, subnational and local climate action, including climate change adaptation and mitigation, and to supporting the efforts of cities and human settlements, their inhabitants and all local stakeholders as important implementers.</p>
+<ol start="3" type="1">
+<li>Point 37</li>
+</ol>
+<p>We commit ourselves to promoting safe, inclusive, accessible, green and quality public spaces, including streets, sidewalks and cycling lanes, squares, waterfront areas, gardens and parks, that are multifunctional areas for social interaction and inclusion, human health and well-being</p>
+<ul>
+<li>local</li>
+</ul>
+<ol type="1">
+<li>Singapore</li>
+</ol>
+<ul>
+<li><p>Introduce more efficient physical infrastructure, such as district-level cooling that efficiently uses energy to mechanically cool large areas in cities</p></li>
+<li><p>Nature-based solutions, such as increasing the extent and density of green spaces in cities and on walls and roofs, and;</p></li>
+<li><p>Integrated, inclusive planning of urban stakeholders to ensure that vulnerable urban residents are protected</p></li>
+<li><p>use substituted cooling solution, propane as a refrigerant could lessen the global temperature increase from space cooling, meaning that we could avoid a 0.09°C increase in global temperature by the end of the century, making a significant contribution toward keeping the global temperature rise below 1.5 °C.</p></li>
+</ul>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/sing.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Propane cooling solution. Source: <a href="https://www.weforum.org/agenda/2022/08/ways-to-cool-cities-and-avoid-urban-heat-islands/">World Economic Forum</a></figcaption><p></p>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>Medellín’s interconnected green corridors</li>
+</ol>
+<p>Since 2016, Medellín has created 30 ‘Corredores Verdes,’ an interconnected network of greenery across the city, it demonstrates how integrated, nature-based policies like widespread urban tree planting can have a far-reaching impact on the local and global environment, as well as significantly improving citizens’ lives and well-being.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/med.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Green corridors. Source: <a href="https://www.archdaily.cl/cl/921605/medellin-crea-30-corredores-verdes-para-mitigar-el-calentamiento-urbano">Arch diary</a></figcaption><p></p>
+</figure>
+</div>
+<ol start="3" type="1">
+<li>Cooling Cities with Zoning in Cambridge, Massachusetts</li>
+</ol>
+<p>At the city level, cities are continuing early work described in Scorched to develop heat-informed zoning policies. Cambridge estimated the temperature-reduction effects of various cooling strategies—such as preserving mature trees and using light-colored paving and building materials—and drafted a site scoring system that is now being piloted at four sites.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/sealtte.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Zoning policy. Source: <a href="https://urbanland.uli.org/sustainability/four-approaches-to-reducing-the-urban-heat-island-effect/">URBANLAND</a></figcaption><p></p>
+</figure>
+</div>
+</section>
+</section>
+<section id="application-in-gee" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="application-in-gee"><span class="header-section-number">8.1.2</span> Application in GEE</h3>
+<p>To analyze the temperature distribution and urban heat island effect, I use Houston city, USA as an example</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/hou1.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Landsat temperature map</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/hou2.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Mean summer temperature image</figcaption><p></p>
+</figure>
+</div>
+<p>It is shown in this picture, the center area of Houston has higher temperature, and Low temperature appears from north-east part south-east part of Houston, this part is mountain and sea, west area seems to be hotter than east area.</p>
+<p><img src="docs/image/hou3.png" class="img-fluid" alt="Temperature time series"> The highest temperature in summer appears around 20 June, and the lowest temperature appears in 15-20 September, average temperature in summer is higher than 30 degree.</p>
+</section>
+</section>
+<section id="applicaion" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="applicaion"><span class="header-section-number">8.2</span> Applicaion</h2>
+<ul>
+<li>Case 1: socioeconomic drivers of urban heat island effect</li>
+</ul>
+<p>Li et al.&nbsp;(2020) tried to measure the magnitudes and marginal effect of socioeconomic drivers on UHI dynamics in major Chinese cities. Generalized additive model (GAM) sre used for modelling non-linear/linear relations between economic output, population, industrial structure, geographical features and UHI at seasonal and climate-zones level.</p>
+<p>The result shows that socioeconomic factors explain 12 %∼20 % of UHI intensity variations. Urban economic scale generally has a higher contribution rate than variables of population and industrial structure. Urban economic growth raised the heat stress in hot summer. Moreover, a negative linear nexus was observed between the UHI intensity and per capital GDP, indicating that the empirical results supported a post-environmental Kuznets curve (EKC) relationship during the sample period.</p>
+<p>Variables selected according to this correlation coefficient matrix</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/matrix2.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://doi.org/10.1016/j.scs.2020.102425">Li et al.&nbsp;(2020)</a></figcaption><p></p>
+</figure>
+</div>
+<p>generalized additive model expression formula:</p>
+<p><img src="docs/image/for.png" class="img-fluid" alt="Formula"> <img src="docs/image/year.jpg" class="img-fluid" alt="Non-linear relationship compared between summer and winter"></p>
+<p>The result shows the annual UHII increased rapidly until 2010 and remained stable after 2010. Significant seasonal variations in UHII were also observed during the study period. The mean LST was greater in summer than in winter for both urban and rural differences. In summer, mean UHII initially increases and then decreases after 2010. The winter response curve showed a U-shaped trajectory.</p>
+<p>This is an application of generalized additive model in different seasons, the solid black line indicates the trend in UHII with the year of observation, and the shaded area centered on the solid line indicates the lower and upper limits of UHII.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/detail.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Application of GAM</figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Case 2: global urban population exposure to extreme heat</li>
+</ul>
+<p>Tuholske et al.&nbsp;(2021) examines how urbanization affects the exposure of human populations to extreme heat events. They use satellite data and climate models to estimate the urban heat island (UHI) effect and the population density for 1692 cities around the world. They find that urbanization increases both the frequency and intensity of extreme heat events, especially in tropical regions. Based on this, they predict that by 2050, more than 1.6 billion people in urban areas will experience at least 20 days per year with a maximum temperature above 35 °C, which is a fourfold increase from 2000. Therefore, they suggest that urban planning and design strategies can help mitigate the UHI effect and reduce the risk of heat-related mortality and morbidity.</p>
+<p>They found a linear relationship between overall population growth and the increase in the urban heat island effect over the years, which has led to an increasing number of people being exposed to the adverse effects of the heat island effect.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/a.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Linear relationship. Soruce: <a href="https://doi.org/10.1073/pnas.2024792118">Tuholske et al.&nbsp;(2021)</a></figcaption><p></p>
+</figure>
+</div>
+<p>This is a global map of the increase in the number of people at risk from the heat island effect, which shows that the number of people affected per day is significant in western Africa near the equator, eastern Africa, all of India and southeastern China, Southeast Asia, Central America and the Middle East, and also shows that the heat island effect is increasing significantly in these areas.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/b.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Global map of UHI exposed population</figcaption><p></p>
+</figure>
+</div>
+<p>The following regions are typical of the major population growth areas of recent times, the most significant cause of temperature growth in South Asia and Saharan Africa is population growth and consequently, heat island effect, and a relatively small share of global warming, typical city is Kolkata in India. West Asia and the Latin American Caribbean are evenly divided, but population growth is an important factor that cannot be ignored.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/c.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Reason for temperature increase (four regions)</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="reflection" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">8.3</span> Reflection</h2>
+<p>The urban heat island effect is a key concern for city managers at the moment, and it can be seen that many cities have introduced policies to combat the heat island effect and reduce urban temperatures.</p>
+<p>The point that I am more interested in is how to do a temperature simulation of a city using the SOLWEIG model and collect the input values needed for this model. This link (https://umep-docs.readthedocs.io/projects/tutorial/en/latest/Tutorials/IntroductionToSolweig.html) is an introduction to the model and its applications, which I would like to explore outside of this course, not only for my future projects of the same type, but also to enhance my coding and graphical skills.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="docs/image/SOLWEIG.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">SOLWEIG model workflow</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./week7.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week7: Classification II</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

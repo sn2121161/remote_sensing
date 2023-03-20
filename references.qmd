@@ -1,4 +1,31 @@
 # References {.unnumbered}
 
-::: {#refs}
-:::
+<div>
+
+Firigato, Joao Otavio Nascimento. "Object Based Image Analysis on Google Earth Engine." Medium, 16 July 2020, joaootavionf007.medium.com/object-based-image-analysis-on-google-earth-engine-1b80e9cb7312.
+
+Gomes, Vitor C. F., et al. "An Overview of Platforms for Big Earth Observation Data Management and Analysis." Remote Sensing, vol. 12, no. 8, Apr. 2020, p. 1253, doi:https://doi.org/10.3390/rs12081253.
+
+"How to Cool down Cities and Eliminate Urban Heat Islands." World Economic Forum, www.weforum.org/agenda/2022/08/ways-to-cool-cities-and-avoid-urban-heat-islands/.
+
+Karasiak, N., et al. "Spatial Dependence between Training and Test Sets: Another Pitfall of Classification Accuracy Assessment in Remote Sensing." Machine Learning, vol. 111, no. 7, Apr. 2021, pp. 2715--40, doi:https://doi.org/10.1007/s10994-021-05972-1.
+
+<div>
+
+Li, Ying, et al. "Socioeconomic Drivers of Urban Heat Island Effect: Empirical Evidence from Major Chinese Cities." Sustainable Cities and Society, Aug. 2020, p. 102425, doi:https://doi.org/10.1016/j.scs.2020.102425.
+
+Mahdianpari, M., et al. "A Large-Scale Change Monitoring of Wetlands Using Time Series Landsat Imagery on Google Earth Engine: A Case Study in Newfoundland." GIScience & Remote Sensing, vol. 57, no. 8, Nov. 2020, pp. 1102--24, doi:https://doi.org/10.1080/15481603.2020.1846948.
+
+Mayer, Timothy, et al. "Deep Learning Approach for Sentinel-1 Surface Water Mapping Leveraging Google Earth Engine." ISPRS Open Journal of Photogrammetry and Remote Sensing, vol. 2, Dec. 2021, p. 100005, doi:https://doi.org/10.1016/j.ophoto.2021.100005.
+
+Mehmood, Hamid, et al. "Mapping of Flood Areas Using Landsat with Google Earth Engine Cloud Platform." Atmosphere, vol. 12, no. 7, July 2021, p. 866, doi:https://doi.org/10.3390/atmos12070866.
+
+Nasiri, Vahid, et al. "Land Use and Land Cover Mapping Using Sentinel-2, Landsat-8 Satellite Images, and Google Earth Engine: A Comparison of Two Composition Methods." Remote Sensing, vol. 14, no. 9, Apr. 2022, p. 1977, doi:https://doi.org/10.3390/rs14091977.
+
+Tuholske, Cascade, et al. "Global Urban Population Exposure to Extreme Heat." Proceedings of the National Academy of Sciences, vol. 118, no. 41, Oct. 2021, p. e2024792118, doi:https://doi.org/10.1073/pnas.2024792118.
+
+Wu, Hao, et al. "An Object-Based Image Analysis for Building Seismic Vulnerability Assessment Using High-Resolution Remote Sensing Imagery." Natural Hazards, vol. 71, no. 1, Oct. 2013, pp. 151--74, doi:https://doi.org/10.1007/s11069-013-0905-6.
+
+</div>
+
+</div>
